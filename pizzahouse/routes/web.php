@@ -18,6 +18,6 @@ Route::get('/', function () {
 });
 
 
-Route::get('/pizzas', function () {
-    return view('pizzas');
-});
+Route::get('/pizzas', 'PizzaController@index');
+
+Route::get('/pizzas/{id}', 'PizzaController@show');
